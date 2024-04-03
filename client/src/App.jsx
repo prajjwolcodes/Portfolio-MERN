@@ -17,7 +17,7 @@ const App = () => {
 
   async function fetchData() {
     try {
-      const res = await axios.get("http://localhost:3000/getdata")
+      const res = await axios.get("https://portfolio-mern-59ki/getdata")
       dispatch(getData(res.data))
       dispatch(reloadData(false))
     } catch (e) {
