@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgd {
+    background: linear-gradient(to top, #F15F79, #B24592)
+}
+
+.titles {
+    color: orange;
+}
+
+i {
+    cursor: pointer;
+
+}
+
+i:hover {
+    color: black;
+}
+
+.p {
+    animation: p 1s infinite;
+}
+
+@keyframes p {
+    0% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0.5;
+    }
+
+    66% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.r {
+    animation: r 1s infinite;
+}
+
+@keyframes r {
+    0% {
+        opacity: 0.5;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.z {
+    animation: z 1s infinite;
+}
+
+@keyframes z {
+    0% {
+        opacity: 0.5;
+    }
+
+    33% {
+        opacity: 0.5;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.l {
+    animation: l 1s infinite;
+}
+
+@keyframes l {
+    0% {
+        opacity: 0.5;
+    }
+
+    33% {
+        opacity: 0.5;
+    }
+
+    66% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ant-tabs-tab-btn {
+    font-size: 20px;
+}
