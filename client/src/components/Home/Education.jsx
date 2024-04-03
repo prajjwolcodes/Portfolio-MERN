@@ -6,7 +6,6 @@ const Education = () => {
     const [selectedEducation, setSelectedEducation] = useState(0)
     const { portfolioData } = useSelector(state => state.data)
     const { educations: education } = portfolioData
-    // const { board, period, uni, description } = abouts[0]
     return (
         <div id='education' >
             <SectionTitle title="Education" />

@@ -1,4 +1,6 @@
 const User = require("../../models/userModel");
+const generateOtp = require("../../services/optGenerator");
+const sendEmail = require("../../services/sendEmail");
 
 exports.login = async (req, res) => {
     const { email, password } = req.body
@@ -29,4 +31,45 @@ exports.login = async (req, res) => {
         message: "You are succesfully Logged In"
     })
 
-}   
+}
+
+
+exports.forgotPassword = async (req, res) => {
+    const { email } = req.body
+    const userFound = await User.findOne({ email: email })
+    if (!userFound) {
+        return res.status(400).json({
+            message: "No account registered with that email"
+        })
+    }
+
+    const otp = generateOtp()
+    userFound.otp = otp
+    await userFound.save()
+
+    await sendEmail({
+        email: email,
+        subject: "Change your password using this OTP",
+        text: "Use this one time password to reset your password " + otp
+    })
+
+    res.status(200).json({
+        message: "OTP succesfully sent"
+    })
+}
+
+exports.resetPassword = async (req, res) => {
+    const { confirmPassword, password } = req.body
+    if (confirmPassword !== password)
+        return res.status(400).json({
+            message: "Password Donot Match"
+        })
+    const userFound = await User.findOne({ email: "shresthaprajjwol4@gmail.com" })
+
+    userFound.password = password
+    await userFound.save()
+
+    res.status(200).json({
+        message: "Password Successfully changed"
+    })
+}

@@ -7,7 +7,6 @@ import toast from 'react-hot-toast'
 const Projects = () => {
     const { portfolioData } = useSelector(state => state.data)
     const { projects } = portfolioData
-    const navigate = useNavigate()
 
     return (
         <div id='projects'>
