@@ -17,7 +17,7 @@ const AdminAbout = () => {
         const skill = aboutData.skill.split(",")
         const data = { ...aboutData, skill }
         try {
-            const res = await axios.patch("http://localhost:3000/updateabout", { data, _id })
+            const res = await axios.patch("/updateabout", { data, _id })
             toast.success(res.data.message)
         } catch (error) {
             toast.error(error.message);
