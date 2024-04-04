@@ -36,9 +36,9 @@ const AdminProject = () => {
             let res
             {
                 addProject ?
-                    res = await axios.post("http://localhost:3000/addproject", data)
+                    res = await axios.post("/addproject", data)
                     :
-                    res = await axios.patch("http://localhost:3000/updateproject/" + projects[selectedProject]._id, data)
+                    res = await axios.patch("/updateproject/" + projects[selectedProject]._id, data)
             }
             dispatch(reloadData(true))
             toast.success(res.data.message)
@@ -48,7 +48,7 @@ const AdminProject = () => {
     }
 
     async function handleDelete(i) {
-        const res = await axios.delete("http://localhost:3000/deleteproject/" + projects[i]._id)
+        const res = await axios.delete("/deleteproject/" + projects[i]._id)
         dispatch(reloadData(true))
         toast.success(res.data.message)
     }
