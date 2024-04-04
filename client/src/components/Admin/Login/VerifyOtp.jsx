@@ -11,7 +11,7 @@ const Verifyotp = () => {
         try {
             const formData = new FormData(e.currentTarget)
             const data = Object.fromEntries(formData)
-            const res = await axios.post("http://localhost:3000/verifyotp", data)
+            const res = await axios.post("/verifyotp", data)
             toast.success(res.data.message)
             navigate("/resetpassword")
         }
