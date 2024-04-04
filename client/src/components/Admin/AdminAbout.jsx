@@ -36,7 +36,8 @@ const AdminAbout = () => {
                             >
                                 Description 1
                             </label>
-                            <input
+                            <textarea
+                                rows="4"
                                 type="text"
                                 name="description1"
                                 id="description1"
@@ -52,7 +53,8 @@ const AdminAbout = () => {
                             >
                                 Description 2
                             </label>
-                            <input
+                            <textarea
+                                rows="4"
                                 type="text"
                                 name="description2"
                                 id="description2"
