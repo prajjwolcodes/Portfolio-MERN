@@ -13,7 +13,7 @@ const AdminHero = () => {
         const formData = new FormData(e.currentTarget)
         const data = Object.fromEntries(formData)
         try {
-            const res = await axios.patch("http://localhost:3000/updateintro/", { data, _id })
+            const res = await axios.patch("/updateintro/", { data, _id })
             toast.success(res.data.message)
         } catch (error) {
             toast.error(error.message);
