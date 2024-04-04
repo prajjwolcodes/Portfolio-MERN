@@ -14,7 +14,7 @@ const AdminContact = () => {
         console.log(data);
         // return
         try {
-            const res = await axios.patch("http://localhost:3000/updatecontact", data)
+            const res = await axios.patch("/updatecontact", data)
             toast.success(res.data.message)
         } catch (error) {
             toast.error(error.message);
