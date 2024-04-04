@@ -37,9 +37,9 @@ const AdminEducation = () => {
             let res
             {
                 addEducation ?
-                    res = await axios.post("http://localhost:3000/addeducation", data)
+                    res = await axios.post("/addeducation", data)
                     :
-                    res = await axios.patch("http://localhost:3000/updateeducation/" + educations[selectedEducation]._id, data)
+                    res = await axios.patch("/updateeducation/" + educations[selectedEducation]._id, data)
             }
             dispatch(reloadData(true))
             toast.success(res.data.message)
@@ -49,7 +49,7 @@ const AdminEducation = () => {
     }
 
     async function handleDelete(i) {
-        const res = await axios.delete("http://localhost:3000/deleteeducation/" + educations[i]._id)
+        const res = await axios.delete("/deleteeducation/" + educations[i]._id)
         dispatch(reloadData(true))
         toast.success(res.data.message)
     }
