@@ -11,7 +11,7 @@ const ResetPassword = () => {
         try {
             const formData = new FormData(e.currentTarget)
             const data = Object.fromEntries(formData)
-            const res = await axios.post("http://localhost:3000/resetpassword", data)
+            const res = await axios.post("/resetpassword", data)
             toast.success(res.data.message)
             navigate("/login")
         }
