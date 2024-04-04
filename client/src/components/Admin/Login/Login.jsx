@@ -11,7 +11,7 @@ const Login = () => {
         try {
             const formdata = new FormData(e.currentTarget)
             const data = Object.fromEntries(formdata)
-            const res = await axios.post("http://localhost:3000/login", data)
+            const res = await axios.post("/login", data)
             toast.success(res.data.message)
             localStorage.setItem("user", JSON.stringify(res.data.user))
             navigate("/admin")
