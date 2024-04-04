@@ -17,7 +17,7 @@ const App = () => {
 
   async function fetchData() {
     try {
-      const res = await axios.get("https://Portfolio-MERN/getdata")
+      const res = await axios.get("/getdata")
       dispatch(getData(res.data))
       dispatch(reloadData(false))
     } catch (e) {
