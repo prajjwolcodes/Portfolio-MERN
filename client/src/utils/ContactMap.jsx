@@ -4,7 +4,7 @@ const ContactMap = () => {
     return (
         <section className="text-gray-600 body-font relative">
             <div className="container px-5 py-15 sm:px-0 mx-auto flex gap-8 sm:flex-col flex-wrap">
-                <div className="w-[600px] bg-gray-300 rounded-lg flex-1 overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+                <div className="w-[600px] sm:w-[300px] bg-gray-300 rounded-lg flex-1 overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
                     <iframe width="100%" height="100%" className="absolute inset-0" title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.6904435576153!2d85.36490402538037!3d27.665047577356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a08deaac20d%3A0x2c994399b80e4bda!2sBalkot%20Chowk%2C%20Anantalingeshwar%2044600!5e0!3m2!1sen!2snp!4v1711943408541!5m2!1sen!2snp"></iframe>
 
                     <div className="bg-white relative flex flex-col py-6 pr-24 rounded shadow-md">
